@@ -37,8 +37,6 @@ def physical():
         mixer.music.pause()
         with open('eyes.txt') as f:
             f.write(f'{gettime()} Physical Exersice')
-            break
-
 while True:
     watr()
     eydone()
