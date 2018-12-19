@@ -3,14 +3,15 @@ import datetime
 import time
 def gettime():
     datetime.datetime.now()
-def water(u):
+def water():
     time.sleep(1800)
-    while u == 'Drank' or u == 'drank':
+    water = input('Please wite drank to stop the reminder ')
+    while water == 'Drank' or water == 'drank':
         file = 'water.mp3'
         mixer.init()
         mixer.music.load(file)
         mixer.music.play()
-        if u=='Drank' or u=='drank':
+        if water=='Drank' or water=='drank':
             mixer.music.pause()
             with open('water_intack.txt') as f:
                 f.write(f'{gettime()} water')
@@ -18,14 +19,15 @@ def water(u):
         else:
             print('Wrong input')
             mixer.music.play()
-def eydone(u):
+def eydone():
     time.sleep(2700)
-    while u == 'Eydone' or u == 'eydone':
+    eyes = input('Please wite eydone to stop the reminder ')
+    while eyes == 'Eydone' or eyes == 'eydone':
         file = 'eyes.mp3'
         mixer.init()
         mixer.music.load(file)
         mixer.music.play()
-        if u=='Eydone' or u=='eydone':
+        if eyes=='Eydone' or eyes=='eydone':
             mixer.music.pause()
             with open('eyes.txt') as f:
                 f.write(f'{gettime()} Eyes Exersice')
@@ -33,14 +35,15 @@ def eydone(u):
         else:
             print('Wrong input')
             mixer.music.play()
-def physical(u):
+def physical():
     time.sleep(3000)
-    while u == 'Exdone' or u == 'exdone':
+    exercise = input('Please wite exdone to stop the reminder ')
+    while exercise == 'Exdone' or exercise == 'exdone':
         file = 'physical.mp3'
         mixer.init()
         mixer.music.load(file)
         mixer.music.play()
-        if u=='Exdone' or u=='exdone':
+        if exercise=='Exdone' or exercise=='exdone':
             mixer.music.pause()
             with open('eyes.txt') as f:
                 f.write(f'{gettime()} Physical Exersice')
@@ -50,9 +53,6 @@ def physical(u):
             mixer.music.play()
 
 while True:
-    water = input('Please wite drank to stop the reminder ')
-    water(water)
-    eyes = input('Please wite eydone to stop the reminder ')
-    eydone(eyes)
-    exercise = input('Please wite exdone to stop the reminder ')
-    physical(exercise)
+    water()
+    eydone()
+    physical()
