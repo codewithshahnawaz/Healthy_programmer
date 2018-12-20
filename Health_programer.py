@@ -5,7 +5,7 @@ import time
 def gettime():
 	return (datetime.datetime.now())
 def watr():
-    time.sleep(10)
+    time.sleep(1800)
     file = 'water.mp3'
     mixer.init()
     mixer.music.load(file)
@@ -16,7 +16,7 @@ def watr():
         with open('water.txt','a') as f:
             f.write(f'{gettime()} Water\n')
 def eydone():
-    time.sleep(25)
+    time.sleep(4600)
     eyes = input('Please write eydone to stop the reminder ')
     file = 'eyes.mp3'
     mixer.init()
@@ -27,7 +27,7 @@ def eydone():
         with open('eyes.txt','a') as f:
             f.write(f'{gettime()} Eyes Exersice\n')
 def physical():
-    time.sleep(35)
+    time.sleep(3600)
     exercise = input('Please write exdone to stop the reminder ')
     file = 'physical.mp3'
     mixer.init()
