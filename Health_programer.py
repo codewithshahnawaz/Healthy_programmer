@@ -3,7 +3,7 @@ from pygame import mixer
 import datetime
 import time
 def gettime():
-	print(datetime.datetime.now())
+	return (datetime.datetime.now())
 def watr():
     time.sleep(1800)
     file = 'water.mp3'
@@ -13,7 +13,7 @@ def watr():
     water = input('Please widte drank to stop the reminder ')
     if water=='Drank' or 'drank':
         mixer.music.pause()
-        with open('water.txt') as f:
+        with open('water.txt','a') as f:
             f.write(f'{gettime()} Water')
 def eydone():
     time.sleep(4600)
@@ -24,7 +24,7 @@ def eydone():
     mixer.music.play()
     if eyes=='Eydone' or eyes=='eydone':
         mixer.music.pause()
-        with open('eyes.txt') as f:
+        with open('eyes.txt','a') as f:
             f.write(f'{gettime()} Eyes Exersice')
 def physical():
     time.sleep(6600)
@@ -35,7 +35,7 @@ def physical():
     mixer.music.play()
     if exercise=='Exdone' or exercise=='exdone':
         mixer.music.pause()
-        with open('eyes.txt') as f:
+        with open('eyes.txt','a') as f:
             f.write(f'{gettime()} Physical Exersice')
 while True:
     watr()
