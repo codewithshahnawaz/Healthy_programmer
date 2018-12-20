@@ -14,7 +14,7 @@ def watr():
     if water=='Drank' or 'drank':
         mixer.music.pause()
 def eydone():
-    time.sleep(1800)
+    time.sleep(600)
     file = 'eyes.mp3'
     mixer.init()
     mixer.music.load(file)
@@ -25,7 +25,7 @@ def eydone():
         with open('eyes.txt','a') as f:
             f.write(f'{gettime()} Eyes Exersice\n')
 def physical():
-    time.sleep(1800)
+    time.sleep(300)
     file = 'physical.mp3'
     mixer.init()
     mixer.music.load(file)
