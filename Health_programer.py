@@ -36,7 +36,7 @@ def physical():
         with open('Exercise.txt','a') as f:
             f.write(f'{gettime()} Physical Exersice\n')
 water_level = 0
-while water_level != 3000:
+while water_level != 3500:
     watr()
     level = int(input('How much water did you drink '))
     with open('water.txt','a') as f:
