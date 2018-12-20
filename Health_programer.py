@@ -9,7 +9,7 @@ def watr():
     file = 'water.mp3'
     mixer.init()
     mixer.music.load(file)
-    mixer.music.play()
+    mixer.music.play(10000,0.0)
     water = input('Please widte drank to stop the reminder ')
     if water=='Drank' or 'drank':
         mixer.music.pause()
@@ -21,7 +21,7 @@ def eydone():
     file = 'eyes.mp3'
     mixer.init()
     mixer.music.load(file)
-    mixer.music.play()
+    mixer.music.play(10000,0.0)
     if eyes=='Eydone' or eyes=='eydone':
         mixer.music.pause()
         with open('eyes.txt','a') as f:
@@ -32,7 +32,7 @@ def physical():
     file = 'physical.mp3'
     mixer.init()
     mixer.music.load(file)
-    mixer.music.play()
+    mixer.music.play(10000,0.0)
     if exercise=='Exdone' or exercise=='exdone':
         mixer.music.pause()
         with open('eyes.txt','a') as f:
