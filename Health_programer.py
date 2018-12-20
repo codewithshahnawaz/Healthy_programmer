@@ -16,7 +16,7 @@ def watr():
         with open('water.txt') as f:
             f.write(f'{gettime()} Water')
 def eydone():
-    time.sleep(2700)
+    time.sleep(4600)
     eyes = input('Please wite eydone to stop the reminder ')
     file = 'eyes.mp3'
     mixer.init()
@@ -27,7 +27,7 @@ def eydone():
         with open('eyes.txt') as f:
             f.write(f'{gettime()} Eyes Exersice')
 def physical():
-    time.sleep(3000)
+    time.sleep(6600)
     exercise = input('Please wite exdone to stop the reminder ')
     file = 'physical.mp3'
     mixer.init()
