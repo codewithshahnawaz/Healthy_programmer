@@ -42,6 +42,6 @@ while water_level != 3500:
     with open('water.txt','a') as f:
         f.write(f'{gettime()} Water {level}\n')
     water_level += level
-    print(f'{3000-water_level} ml remainig')
+    print(f'{3500-water_level} ml remainig')
     eydone()
     physical()
