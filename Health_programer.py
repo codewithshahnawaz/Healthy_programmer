@@ -40,7 +40,7 @@ while water_level != 3500:
     watr()
     level = int(input('How much water did you drink '))
     with open('water.txt','a') as f:
-        f.write(f'{gettime()} Water {level}\n')
+        f.write(f'{gettime()} Water {level} ml\n')
     water_level += level
     print(f'{3500-water_level} ml remainig')
     eydone()
