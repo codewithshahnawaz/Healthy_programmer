@@ -16,7 +16,7 @@ def watr():
         with open('water.txt','a') as f:
             f.write(f'{gettime()} Water\n')
 def eydone():
-    time.sleep(4600)
+    time.sleep(1800)
     file = 'eyes.mp3'
     mixer.init()
     mixer.music.load(file)
@@ -27,7 +27,7 @@ def eydone():
         with open('eyes.txt','a') as f:
             f.write(f'{gettime()} Eyes Exersice\n')
 def physical():
-    time.sleep(3600)
+    time.sleep(1800)
     file = 'physical.mp3'
     mixer.init()
     mixer.music.load(file)
