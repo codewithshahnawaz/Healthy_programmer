@@ -13,8 +13,6 @@ def watr():
     water = input('Please write drank to stop the reminder ')
     if water=='Drank' or 'drank':
         mixer.music.pause()
-        with open('water.txt','a') as f:
-            f.write(f'{gettime()} Water\n')
 def eydone():
     time.sleep(1800)
     file = 'eyes.mp3'
@@ -37,7 +35,14 @@ def physical():
         mixer.music.pause()
         with open('Exercise.txt','a') as f:
             f.write(f'{gettime()} Physical Exersice\n')
-while True:
+water_level = 0
+while water_level != 3000:
     watr()
+    level = int(input('How much water did you drink '))
+    print(f'{3000-level} ml remainig')
+    with open('water.txt','a') as f:
+        f.write(f'{gettime()} Water {level}\n')
+    water_level += level
+while True:
     eydone()
     physical()
